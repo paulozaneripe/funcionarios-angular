@@ -1,0 +1,108 @@
+table {
+    font-size: 1.6rem;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+table th {
+    background-color: #2d64a3;
+    color: white;
+    border-right: 1px solid #26558b;
+}
+
+table th:first-of-type{
+    border-top-left-radius: 5px;
+}
+
+
+table th:last-of-type {
+    border-top-right-radius: 5px;
+    border-right: none;
+}
+
+table td {
+    border: 1px solid #ddd;
+}
+
+table td:first-of-type {
+    border-left: none;
+}
+
+table td:last-of-type {
+    border-right: none;
+}
+
+table td, table th {
+    padding: 12px 8px;
+}
+
+table tr {
+    transition: 400ms;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+} 
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+table span.remover {
+    background-color: var(--vermelho);
+    padding: 5px 10px;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+table span.alterar {
+    background-color: #b1833e;
+    padding: 5px 10px;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+table span:hover{
+    filter: brightness(115%);
+} 
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    padding: 12px;
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    background-color: var(--vermelho);
+    transition: 400ms;
+    width: 100%;
+}
+
+.buttons button:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.buttons button#cadastrar {
+    background-color: #369c5d;
+}

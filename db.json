@@ -1,0 +1,44 @@
+{
+  "funcionarios": [
+    {
+      "id": "1",
+      "nome": "Lucas",
+      "filial": "Matriz",
+      "cargo": "Programador",
+      "salario": "1200",
+      "admissao": "2000-06-12"
+    },
+    {
+      "nome": "João",
+      "filial": "Setor 1",
+      "cargo": "Programador",
+      "salario": "1200",
+      "admissao": "2000-06-12",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "nome": "Lucas",
+      "filial": "Matriz",
+      "cargo": "Programador",
+      "salario": "1200",
+      "admissao": "2000-06-12"
+    },
+    {
+      "id": 4,
+      "nome": "Lucas",
+      "filial": "Setor 2",
+      "cargo": "Programador",
+      "salario": "1200",
+      "admissao": "2000-06-12"
+    },
+    {
+      "nome": "Paulo",
+      "filial": "Setor 2",
+      "cargo": "Desenvolvedor",
+      "salario": 3200,
+      "admissao": "2011-11-11",
+      "id": 5
+    }
+  ]
+}

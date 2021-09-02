@@ -1,0 +1,65 @@
+.fields {
+    position: relative;
+    display: grid;
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.fields input, select {
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 1.4rem;
+    border: 1px solid black;
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+.fields input:focus { 
+    outline: none !important;
+    border-color: whitesmoke;
+}
+
+.fields input::placeholder {
+    color: #aaa;
+}
+
+.fields select:invalid {
+    color: #aaa;
+}
+
+select > option {
+    color: white;
+}
+
+.fields label {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 12px;
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    background-color: #369c5d;
+    transition: 400ms;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+#botao-fechar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -7px;
+    color: #DADADA;
+    cursor: pointer;
+    transition: color 100ms;
+}
+
+#botao-fechar:hover {
+    color: var(--vermelho);
+}

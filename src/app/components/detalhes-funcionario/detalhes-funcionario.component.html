@@ -1,0 +1,10 @@
+<div class="funcionario-modal">
+    <div class="funcionario-detalhes">
+        <mat-icon id="botao-fechar" (click)="deselecionarFuncionario()">close</mat-icon> 
+        <span>{{ funcionario?.nome }}</span>
+        <span><b>Filial:</b> {{ funcionario?.filial }}</span>
+        <span><b>Cargo:</b> {{ funcionario?.cargo }}</span>
+        <span><b>Salário:</b> {{ funcionario?.salario | currency:'BRL' }}</span>
+        <span><b>Data de Admissão:</b> {{ funcionario?.admissao | date:'dd/MM/yyyy' }}</span>
+    </div>
+</div>

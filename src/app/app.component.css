@@ -1,0 +1,31 @@
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 90%;
+    min-height: calc(100vh - 160px);
+}
+
+
+header, footer {
+    background-color: rgb(44, 44, 44);
+}
+
+header .header-content, footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    height: 60px;
+}
+
+
+footer {
+    margin-top: 20px;
+}
+
+footer .footer-content p {
+    font-size: 1.4rem;
+}
