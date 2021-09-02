@@ -15,6 +15,7 @@ export class FieldsFuncionarioComponent implements OnInit {
   @Input() formCadastro:any;
   @Input() f:any;
   @Output() fecharCampos:any = new EventEmitter();
+  @Output() atualizarTabela:any = new EventEmitter();
   filiais:String[] = Object.values(EnumFilial);
   funcionarioSalvo:Funcionario = {} as Funcionario;
 
@@ -33,9 +34,11 @@ export class FieldsFuncionarioComponent implements OnInit {
     }
 
     this.funcionarioService.addFuncionario(this.funcionarioSalvo)
-      .subscribe();
-    
-    this.fechar();
+      .subscribe(() => {
+        this.atualizarTabela.emit();
+        this.fechar();
+      });
+
   }
 
   alterarFuncionario(funcionario:NgForm) {
@@ -48,9 +51,10 @@ export class FieldsFuncionarioComponent implements OnInit {
     }
 
     this.funcionarioService.alterarFuncionario(funcionario.value.id, this.funcionarioSalvo)
-      .subscribe();
-    
-    this.fechar();
+      .subscribe(() => {
+        this.atualizarTabela.emit();
+        this.fechar();
+      });
   }
 
   fechar() {

@@ -12,21 +12,9 @@ import { FuncionarioService } from './services/funcionario.service';
 export class AppComponent {
 
   title="Funcionários"
-  
+
   funcionarioSelecionado:any = null;
-  funcionarioParaAlterar:any = null;
-  campos:boolean = false;
-  formularioCadastro:any;
   
   constructor () { 
   }
-
-  mostrarCampos(formCadastro:any) {
-    this.campos = true;
-    this.formularioCadastro = formCadastro[0];
-
-    if(this.formularioCadastro != true) {
-      this.funcionarioParaAlterar = formCadastro[1];
-    }
-  } 
 }

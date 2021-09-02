@@ -32,3 +32,9 @@
         </button>
     </div>
 </div>
+<app-fields-funcionario 
+    *ngIf="campos" 
+    [f]="funcionarioParaAlterar" 
+    (fecharCampos)="campos = false"
+    (atualizarTabela)="obterFuncionarios()"
+></app-fields-funcionario>

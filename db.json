@@ -1,44 +1,28 @@
 {
   "funcionarios": [
     {
-      "id": "1",
       "nome": "Lucas",
       "filial": "Matriz",
       "cargo": "Programador",
-      "salario": "1200",
-      "admissao": "2000-06-12"
+      "salario": 2475,
+      "admissao": "2009-05-08",
+      "id": 1
     },
     {
-      "nome": "João",
+      "nome": "Marcos",
       "filial": "Setor 1",
-      "cargo": "Programador",
-      "salario": "1200",
-      "admissao": "2000-06-12",
+      "cargo": "Analista",
+      "salario": 3200,
+      "admissao": "2012-08-12",
       "id": 2
     },
     {
-      "id": 3,
-      "nome": "Lucas",
-      "filial": "Matriz",
-      "cargo": "Programador",
-      "salario": "1200",
-      "admissao": "2000-06-12"
-    },
-    {
-      "id": 4,
-      "nome": "Lucas",
+      "nome": "Mateus",
       "filial": "Setor 2",
-      "cargo": "Programador",
-      "salario": "1200",
-      "admissao": "2000-06-12"
-    },
-    {
-      "nome": "Paulo",
-      "filial": "Setor 2",
-      "cargo": "Desenvolvedor",
-      "salario": 3200,
-      "admissao": "2011-11-11",
-      "id": 5
+      "cargo": "Suporte",
+      "salario": 1200,
+      "admissao": "2014-11-03",
+      "id": 3
     }
   ]
 }

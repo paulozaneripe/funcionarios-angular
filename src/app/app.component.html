@@ -4,15 +4,7 @@
     </div>
 </header>
 <main>
-    <app-tabela-funcionarios 
-        (detalhesFuncionario)="funcionarioSelecionado = $event"
-        (mostrarCampos)="mostrarCampos($event)"
-    ></app-tabela-funcionarios>
-    <app-fields-funcionario 
-        *ngIf="campos" 
-        [f]="funcionarioParaAlterar" 
-        (fecharCampos)="campos = false"
-    ></app-fields-funcionario>
+    <app-tabela-funcionarios (detalhesFuncionario)="funcionarioSelecionado = $event"></app-tabela-funcionarios>
     <app-detalhes-funcionario *ngIf="funcionarioSelecionado" [funcionario]="funcionarioSelecionado" (deselecao)="funcionarioSelecionado = null"></app-detalhes-funcionario>
 </main>
 <footer>

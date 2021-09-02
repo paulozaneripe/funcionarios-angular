@@ -106,3 +106,10 @@ table span:hover{
 .buttons button#cadastrar {
     background-color: #369c5d;
 }
+
+@media (max-width: 800px)
+{
+    table td, table th {
+        padding: 12px 4px;
+    }
+}

@@ -14,12 +14,11 @@ import { Funcionario } from '../../model/funcionario';
 
 export class TabelaFuncionariosComponent implements OnInit {
 
-  formCadastro:any;
-  dadosForm:any;
+  funcionarioSelecionado:any = null;
+  funcionarioParaAlterar:any = null;
+  campos:boolean = false;
   @Input() funcionarios:Funcionario[] = [] as Funcionario[];
   @Output() detalhesFuncionario:any = new EventEmitter();
-  @Output() mostrarCampos = new EventEmitter();
-  @Output() remocao = new EventEmitter();
 
   constructor(private funcionarioService: FuncionarioService) { 
     this.obterFuncionarios();
@@ -37,15 +36,13 @@ export class TabelaFuncionariosComponent implements OnInit {
   }
 
   cadastrarFuncionario() {
-    this.formCadastro = true;
-    this.dadosForm = [this.formCadastro, null];
-    this.mostrarCampos.emit(this.formCadastro);
+    this.campos = true;
+    this.funcionarioParaAlterar = null;
   }
 
   alterarFuncionario(funcionario:Funcionario) {
-    this.formCadastro = false;
-    this.dadosForm = [this.formCadastro, funcionario];
-    this.mostrarCampos.emit(this.dadosForm);
+    this.campos = true;
+    this.funcionarioParaAlterar = funcionario;
   }
 
   removerFuncionario(funcionario:Funcionario) {
@@ -57,6 +54,7 @@ export class TabelaFuncionariosComponent implements OnInit {
 
   removerUltimoFuncionario() {
     this.removerFuncionario(this.funcionarios.slice(-1)[0]);
+    this.campos = false;
   }
 
   async removerFuncionarios() {
@@ -64,6 +62,7 @@ export class TabelaFuncionariosComponent implements OnInit {
       await new Promise(f => setTimeout(f, 50));
       this.removerFuncionario(this.funcionarios[i - 1]);
     }
+    this.campos = false;
   }
 
   mostrarFuncionario(funcionario: Funcionario) {
