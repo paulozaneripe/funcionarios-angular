@@ -36,18 +36,52 @@ select > option {
     margin-bottom: 10px;
 }
 
-button {
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.buttons button {
     padding: 12px;
+    height: 43px;
     color: white;
     border: none;
     font-size: 1.4rem;
-    background-color: #369c5d;
+    background-color: rgb(53, 53, 53);
+    border: 2px solid var(--vermelho);
+    color: #d45d5d;
     transition: 400ms;
+    width: 90%;
 }
 
-button:hover {
+.buttons button:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.buttons button:last-of-type #clean-fields {
+    margin-right: 5px;
+}
+
+.buttons button#cadastrar {
+    background-color: #369c5d;
+    border: none;
+    color: white;
+    margin-right: 2.0rem;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    width: 100%;
+}
+
+.buttons button#cadastrar:hover {
     cursor: pointer;
     filter: brightness(80%);
+    width: 100%;
 }
 
 #botao-fechar {

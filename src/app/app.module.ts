@@ -11,6 +11,7 @@ import { TabelaFuncionariosComponent } from './components/tabela-funcionarios/ta
 import { FieldsFuncionarioComponent } from './components/fields-funcionario/fields-funcionario.component';
 import { DetalhesFuncionarioComponent } from './components/detalhes-funcionario/detalhes-funcionario.component';
 import ptBr from '@angular/common/locales/pt';
+import { RouterModule } from '@angular/router';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -26,7 +27,8 @@ registerLocaleData(ptBr);
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule.forRoot([])
   ],
   providers: [
     {

@@ -1,21 +1,23 @@
-<form #funcionario="ngForm" (ngSubmit)="!f ? cadastrarFuncionario(funcionario) : alterarFuncionario(funcionario)">
+<form [formGroup]="funcionarioForm" (ngSubmit)="!f ? cadastrarFuncionario() : alterarFuncionario()">
     <div class="fields">
         <mat-icon id="botao-fechar" (click)="fechar()">close</mat-icon> 
-        <input type="hidden" name="id" ngModel="{{ f?.id }}">
+        <input type="hidden" formControlName="id" name="id">
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" ngModel="{{ f?.nome }}" placeholder="Insira o nome do Funcionário" required>
+        <input type="text" formControlName="nome" name="nome" placeholder="Insira o nome do Funcionário" required>
         <label for="nome">Filial:</label>
-        <select name="filial" id="filial" ngModel="{{ f?.filial }}" required>
-            <option *ngIf="!f" value="" disabled selected hidden>Escolha uma opção</option>
-            <option *ngIf="f" [ngValue]="f?.filial" selected hidden>{{ f?.filial }}</option>
-            <option *ngFor="let filial of filiais" [ngValue]="filial">{{ filial }}</option>
+        <select name="filial" formControlName="filial" id="filial" required>
+            <option value="" [disabled]="true" [selected]="true" [hidden]="true">Escolha uma opção</option>
+            <option *ngFor="let filial of filiais" [ngValue]="filial" [selected]="f?.filial == filial">{{ filial }}</option>
         </select>
         <label for="cargo">Cargo:</label>
-        <input type="text" name="cargo" ngModel="{{ f?.cargo }}" placeholder="Insira o cargo do Funcionário" required>
+        <input type="text" formControlName="cargo" name="cargo" placeholder="Insira o cargo do Funcionário" required>
         <label for="salario">Salário:</label>
-        <input type="number" name="salario" ngModel="{{ f?.salario }}" placeholder="Insira o salário do Funcionário" required>
+        <input type="number" formControlName="salario" name="salario" placeholder="Insira o salário do Funcionário" required>
         <label for="admissao">Data de admissão:</label>
-        <input type="date" name="admissao" ngModel="{{ f?.admissao }}" required>
-        <button id="cadastrar" type="submit">Salvar funcionário</button>
+        <input type="date" formControlName="admissao" name="admissao" required>
+        <div class="buttons">
+            <button id="cadastrar" type="submit">Salvar funcionário</button>
+            <button (click)="resetarFormulario()" type="button"><mat-icon id="clean-fields">delete_outline</mat-icon>Limpar campos</button>
+        </div>
     </div>
 </form>

@@ -35,14 +35,16 @@ export class TabelaFuncionariosComponent implements OnInit {
       });
   }
 
-  cadastrarFuncionario() {
+  async cadastrarFuncionario() {
+    this.campos = false;
+    await new Promise(f => setTimeout(f, 1));
     this.campos = true;
     this.funcionarioParaAlterar = null;
   }
 
   alterarFuncionario(funcionario:Funcionario) {
-    this.campos = true;
     this.funcionarioParaAlterar = funcionario;
+    this.campos = true;
   }
 
   removerFuncionario(funcionario:Funcionario) {
