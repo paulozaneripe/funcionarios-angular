@@ -13,7 +13,6 @@ export class AppComponent {
 
   title="Funcionários"
   
-  funcionarios:any;
   funcionarioSelecionado:any = null;
   funcionarioParaAlterar:any = null;
   campos:boolean = false;

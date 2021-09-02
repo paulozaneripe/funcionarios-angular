@@ -1,6 +1,7 @@
 import { getLocaleDayPeriods } from '@angular/common';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { EventEmitter, Input, Output } from '@angular/core';
+import { SimpleChanges } from '@angular/core';
+import { EventEmitter, Input, OnChanges, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from 'src/app/services/funcionario.service';
 import { Funcionario } from '../../model/funcionario';
